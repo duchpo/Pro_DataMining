@@ -1,4 +1,3 @@
-# Table of Contents
 # House Price Prediction | Machine Learning  Final Project
 ---
 
