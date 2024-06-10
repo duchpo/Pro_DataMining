@@ -33,18 +33,13 @@
 
 - Hàng ngàn ngôi nhà được bán mỗi ngày. Có một số câu hỏi mà người mua nào cũng tự hỏi mình như: Giá thực tế mà ngôi nhà này xứng đáng là bao nhiêu? Tôi có đang trả giá hợp lý không? Trong tập dữ liệu này, một mô hình học máy được đề xuất để dự đoán giá nhà dựa trên dữ liệu liên quan đến ngôi nhà (kích thước của nó, năm xây dựng, v.v.). 
 
-
-<h1 id="data-prep">Chuẩn bị dữ liệu</h1>
-
 Trong nghiên cứu này, chúng tôi sẽ sử dụng bộ dữ liệu về nhà ở do De Cock (2011) trình bày. Tập dữ liệu này mô tả doanh số bán nhà ở ở Ames, Iowa bắt đầu từ năm 2006 đến năm 2010. Tập dữ liệu chứa một số lượng lớn các biến liên quan đến việc xác định giá nhà. 
-- Đường Link kaggle: https://www.kaggle.com/prevek18/ames-housing-dataset.
 
 ## Mô tả dữ liệu
 
 Tập dữ liệu chứa các bản ghi `2930` (hàng) và các tính năng `82` (cột).
-
 Ở đây, chúng tôi sẽ cung cấp một mô tả ngắn gọn về các tính năng của tập dữ liệu. Vì số lượng đặc điểm lớn (82), chúng tôi sẽ đính kèm tệp mô tả dữ liệu gốc vào bài viết này để biết thêm thông tin về tập dữ liệu 
-- (Cũng có thể tải xuống từ https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data)
+
 
 |Feature|Description|
 |-------|-----------|
@@ -134,34 +129,33 @@ Tập dữ liệu chứa các bản ghi `2930` (hàng) và các tính năng `82`
 ## Problem Solving
 
 ### 👨‍🏫 Exploring the Dataset and Pre-processing
-- Describing the most overall vision for readers to comprehend what exactly this dataset's structure is.
-- Utilizing some legible visualization techniques for plotting out the significant features of the dataset.
-- Identifying any abnormal things in the dataset, such as null/nan data points or outliers, which will incorrectly affect the analysis process.
+- Mô tả một cách tổng thể nhất để người đọc hiểu chính xác cấu trúc của tập dữ liệu này là gì.
+- Sử dụng một số kỹ thuật trực quan dễ đọc để vạch ra các đặc điểm quan trọng của tập dữ liệu.
+- Xác định bất kỳ điều gì bất thường trong tập dữ liệu, chẳng hạn như điểm dữ liệu null/nan hoặc các ngoại lệ, sẽ ảnh hưởng không chính xác đến quá trình phân tích.
 
-### 📊 Establishing the Prediction Model with Logistic Regression and Decision Tree
-- This problem aims to forecast whether the patient has diabetes or not by analyzing the feature attributes, which have strong correlations with the Outcome variables.
-- Observing the dataset to define which attributes are not necessary for these problems. Then, we will remove them before constructing the machine learning models.
-- Comparing the performance and accuracy of the two models and concluding which one is better.
+### 📊 Set up prediction models using models such as Neutral network, Decision tree,...
+- Bài toán này nhằm mục đích dự báo giá nhà bằng cách phân tích các thuộc tính đặc điểm có mối tương quan chặt chẽ với các biến Kết quả.
+- Quan sát tập dữ liệu để xác định những thuộc tính nào không cần thiết cho những vấn đề này. Sau đó, chúng tôi sẽ loại bỏ chúng trước khi xây dựng mô hình học máy.
+- So sánh hiệu năng, độ chính xác của đa dạng các mô hình và rút ra kết luận mô hình nào tốt hơn.
 
-### 🗂 Classifying the Categories of Mass using Random Forest Model
-- The problem serves for identifying the mass situation of the patient, such as underweight, normal, overweight, and obese. It will be helpful for doctors to keep track of the health of patients having a probability of diabetes.
-- Observing the dataset to define which attributes are not necessary for these problems. Then, we will remove them before constructing the models.
-- Performing fine-tuning tasks to select the best parameter values. Then, we can build the best possible model based on these fine-tuned parameters.
-
-### 🕵️‍♀️ Hypothesis Validation using T-Test Technique
-- Using One-sample T-test, we hypothesize that an average BMI (Body Mass Index) of 34 is susceptible to diabetes.
-- Using Independent Samples T-test, we hypothesize that body fat (BMI) does not affect whether or not there is disease.
-- Using One-sample T-test, we hypothesize that age also affects whether a person has diabetes.
+### 🗂 From the best Models come the best attributes
+- Từ các mô hình dự đoán trên ta sẽ thấy được mô hình nào đưa ra được dự đoán tốt nhất dựa trên hệ số MSE ( càng nhỏ càng tốt) 
+- Sau đó ta sẽ lấy các thuộc tính tốt nhất liên quan đến mô hình đó để đưa ra kết luận tốt hơn
 
 ---
 
 ## Technology
-- **Environment**: RStudio, R interpreter.
-- **Display mode**: R-Markdown or R-Notebook.
-- **Packages**:
-  - `glm` for logistic regression.
-  - `rpart` for decision tree model.
-  - `randomForest` for random forest models.
+- **Environment**: Python 
+- **Display mode**: Jupyter notebook
+- **Model**:
+  - `Liner Regression` for logistic regression.
+  - `Elastic Net ` 
+  - `KNN`.
+  - `Support Vector Regression` for support vector.
+  - `Decesion tree ` 
+  - `Neural Network`
+  - `Random Forest` 
+  - `Gradient Boosting`
 
 ---
 
